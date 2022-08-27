@@ -1,0 +1,57 @@
+/*		 1) Descrever o algoritmo para determinar se um aluno está aprovado
+			ou reprovado, considerando que estamos no final do período. */
+
+	//bliblioteca			
+	#include<stdio.h>
+		int main ( ) {
+
+	//declaração de variaveis
+	int CH, NF;
+	float P, av1, av2, M, avf, MF;
+	
+	//solicitando valores
+	printf("Digite a carga horaria da disciplina: ");
+	scanf("%d", &CH);
+	
+	printf("Digite o numero de faltas que teve na disciplina: ");
+	scanf("%d", &NF);
+	
+	/* condição: 
+	ex: Se a disciplna tem 80h de carga horária e precisa ter no mínimo 20h de presença,
+	é necessário ter, exatamente, 25% de presença(P). Já que 20h/80h = 0.25 */
+	
+	//calculando presença
+	P = NF/CH;
+	 
+	if (P > 0.25) {
+		printf("Reprovado por Falta! \n");
+	}
+		else {
+			printf("Digite a nota da AV1: ");
+			scanf("%f", &av1);
+			
+			printf("Digite a nota da AV2: ");
+			scanf("%f", &av2);	
+		} 
+	
+	//calculando media
+	M = ((av1 + av2) / 2);
+	
+	//verificando aprovação por media
+	if (M >= 6) {
+		printf("Aprovado!\n");
+	}
+		if ((M >= 4) || (M <= 5.9)) {
+			printf("Digite a nota da AVF: ");
+			scanf("%f", &avf);
+		}
+		//calculando media final
+		MF = ((M + avf)/ 2);
+		
+			if (MF >= 6) {
+				printf("Aprovado!\n");
+			}
+		else {
+			printf("Reprovado por Media!\n");
+		}
+}
