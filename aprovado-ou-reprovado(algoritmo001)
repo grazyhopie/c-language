@@ -41,16 +41,19 @@
 	if (M >= 6) {
 		printf("Aprovado!\n");
 	}
-		if ((M >= 4) || (M <= 5.9)) {
+		else {
+		}
+		if  (M >= 4) {
 			printf("Digite a nota da AVF: ");
 			scanf("%f", &avf);
-		}
-		//calculando media final
-		MF = ((M + avf)/ 2);
-		
+			
+			//calculando media final
+			MF = ((M + avf)/ 2);
+			
 			if (MF >= 6) {
 				printf("Aprovado!\n");
 			}
+		}
 		else {
 			printf("Reprovado por Media!\n");
 		}
