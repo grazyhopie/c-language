@@ -21,7 +21,7 @@
 	é necessário ter, exatamente, 25% de presença(P). Já que 20h/80h = 0.25 */
 	
 	//calculando presença
-	P = NF/CH;
+	P = (float) NF / CH;  // cast (conversão)
 	 
 	if (P > 0.25) {
 		printf("Reprovado por Falta! \n");
