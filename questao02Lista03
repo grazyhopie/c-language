@@ -1,0 +1,70 @@
+/*QUESTÃO 02:
+Faça um programa que, dadas duas datas (cada
+qual com dia, mês e ano) fornecidas pelo
+usuário, determine qual delas é a mais recente.
+*/
+
+//bliblioteca
+#include<stdio.h>
+void main () {
+
+//declaração de variavéis
+int D1, M1, A1, D2, M2, A2;
+
+printf("\nQual a data mais recente? ");
+
+//solicitar datas
+//Não colocar "/" quando digitar a data pq o programa não roda a segunda data
+printf("\n\nEnsira a primeira data (DD MM AAAA): ");
+scanf("%d %d %d", &D1, &M1, &A1);
+
+printf("Ensira a segunda data (DD MM AAAA): ");
+scanf("%d %d %d", &D2, &M2, &A2);
+
+//verificando a data mais recente
+
+//quando o ano é maior
+	if (A1 > A2)
+	{
+		printf("A primeira data eh a mais recente!");
+	}
+		else
+		{
+			if (A1 < A2)
+			{
+			printf("A segunda data eh a mais recente!");
+			}
+			else
+			{
+				if (M1 > M2)
+				{
+					printf("A primeira data eh a mais recente!");
+				}
+				else
+				{
+					if (M1 < M2)
+					{
+						printf("A segunda data eh a mais recente!");
+					}
+					else
+					{
+						if (D1 > D2)
+				{
+					printf("A primeira data eh a mais recente!");
+				}
+				else
+				{
+					if (D1 < D2)
+					{
+						printf("A segunda data eh a mais recente!");
+					}
+					else
+						{
+						printf("As datas sao iguais!");
+						}
+					}
+				}
+			}
+		}
+	}
+}
