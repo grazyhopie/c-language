@@ -4,7 +4,7 @@ qual com dia, mês e ano) fornecidas pelo
 usuário, determine qual delas é a mais recente.
 */
 
-//bliblioteca
+//biblioteca
 #include<stdio.h>
 void main () {
 
