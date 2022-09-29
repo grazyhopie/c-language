@@ -1,0 +1,111 @@
+	/*QUESTÃO 03:
+	Construir um programa que permita ao usuário
+	calcular a área de uma figura geométrica. Para
+	isto, o usuário deverá escolher a figura desejada
+	([C]írculo, [R]etângulo, [Q]uadrado ou
+	[T]riângulo) e fornecer as informações
+	necessárias para que a área desta figura possa
+	ser calculada.
+	Notas:
+	1. Fórmulas para o cálculo das áreas:
+	a. Acírculo = pi.(raio)², onde pi = 3.14159;
+	b. Aretângulo = base.altura;
+	c. Aquadrado = lado²;
+	d. Atriângulo = (base.altura)/2.
+	
+	2. Caso o usuário escolha uma opção inválida,
+	uma mensagem de erro deve ser exibida e a
+	execução do programa terminada. */
+	
+	//bibliotecas
+	#include <stdio.h>
+	#include <math.h>
+	
+	//definição de constantes
+	#define PI 3.14159
+	
+	//main
+		void main () 
+	{
+		
+	//declaração de variáveis
+	char figura;
+	float raio, lado, base, altura, area;
+
+	//escolher figura geometrica
+	printf("\nDe qual figura geometrica deseja calcular a area? ");
+	printf("\n\nDigite [C] para circulo, [R] para retangulo, [Q] para quadrado e [T] para triangulo: ");
+	scanf("%c", &figura);
+	
+	//colocando a opção do usuario em letra maiuscula
+	figura = toupper(figura);
+	
+	//associando formulas a sua respectiva figura com switch case( escolha...caso)
+	switch(figura)
+	{
+		//circulo: Acírculo = pi.(raio)², onde pi = 3.14159;
+		case 'C':
+			//lendo o raio
+			printf("Medida do raio: ");
+			scanf("%f", &raio);
+			
+			//calculando area do circulo
+			area = 3.14159 * raio * raio; // ou area = PI*pow(raio,2);	
+			
+			//exibindo resultado 
+			printf("\nArea: %.2f: ", area);
+			
+			break;	
+			
+		//retangulo: Aretângulo = base.altura;
+		case 'R':
+			//lendo base e altura
+			printf("\n\nBase: ");
+			scanf("%f", &base);
+			
+			printf("Altura: ");
+			scanf("%f", &altura);
+			
+			//calculando area do retangulo
+			area = base * altura;
+			
+			//exibindo resultado 
+			printf("\nArea: %.2f: ", area);
+			
+			break;
+			
+		//quadrado: Aquadrado = lado²;
+		case 'Q':
+			//lendo o lado
+			printf("Lado: ");
+			scanf("%f", &lado);
+			
+			//calculando area do quadrado
+			area = lado * lado; // ou area = pow(lado,2);
+			
+			//exibindo resultado 
+			printf("\nArea: %.2f: ", area);
+			
+			break;
+			
+		//triangulo: Atriângulo = (base.altura)/2.
+		case 'T':
+			//lendo base e altura
+			printf("\n\nBase: ");
+			scanf("%f", &base);
+			
+			printf("Altura: ");
+			scanf("%f", &altura);
+			
+			//calculando area do triangulo
+			area = (base * altura) / 2;
+			
+			//exibindo resultado 
+			printf("\nArea: %.2f: ", area);
+			
+			break;
+			
+			//se o usuario digitar uma opção invalida
+			default: printf("\nOpcao invalida! ");			
+	} 	   
+		}
